@@ -60,3 +60,38 @@ h5,
 h6 {
   overflow-wrap: break-word;
 }
+
+/*
+    9. Lists styles
+  */
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+/*
+    10. Link style
+  */
+
+a {
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+  }
+}
+
+/*
+    11. Button
+  */
+
+button {
+  outline: none;
+  border: none;
+  background-color: transparent;
+  &:focus {
+    outline: none;
+    border: none;
+  }
+}
