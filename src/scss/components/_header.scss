@@ -1,0 +1,225 @@
+.header {
+  &__wrapper {
+    position: relative;
+    @extend .d-flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 65px;
+    margin: 0 auto;
+    max-width: 90vw;
+
+    @include mq($from: lg) {
+      justify-content: flex-start;
+      height: 80px;
+      max-width: 1368px;
+    }
+  }
+  &__logo-wrapper {
+    position: relative;
+    width: 120px;
+    height: 30px;
+
+    img {
+      position: absolute;
+      top: 0;
+      left: 0;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: auto;
+      object-fit: contain;
+      object-position: center;
+    }
+  }
+  &__toggle {
+    z-index: 9999;
+    right: 0;
+
+    width: 50px;
+    height: 30px;
+    position: relative;
+    transform: rotate(0deg);
+    transition: 0.5s ease-in-out;
+    cursor: pointer;
+
+    span {
+      &:not(:last-child) {
+        display: block;
+        position: absolute;
+        height: 4px;
+        width: 100%;
+        background: #d3531a;
+        border-radius: 9px;
+        opacity: 1;
+        left: 0;
+        transform: rotate(0deg);
+        transition: 0.25s ease-in-out;
+      }
+      &:nth-child(1) {
+        top: 0px;
+        transform-origin: left center;
+      }
+      &:nth-child(2) {
+        top: 14px;
+        transform-origin: left center;
+      }
+      &:nth-child(3) {
+        top: 28px;
+        transform-origin: left center;
+      }
+    }
+
+    &[aria-expanded="true"] span {
+      &:nth-child(1) {
+        transform: rotate(45deg);
+        top: 0px;
+        left: 8px;
+      }
+      &:nth-child(2) {
+        width: 0%;
+        opacity: 0;
+      }
+      &:nth-child(3) {
+        transform: rotate(-45deg);
+        top: 36px;
+        left: 8px;
+      }
+    }
+  }
+
+  &__primary-nav {
+    --gap: 2.5rem;
+    @extend .d-flex;
+
+    position: fixed;
+    z-index: 1000;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 36%;
+
+    flex-direction: column;
+    padding: 5rem 1.5rem;
+
+    transform: translateX(100%);
+    transition: transform 0.3s ease-out;
+    background-color: #fff;
+
+    &[data-visible="true"] {
+      transform: translateX(0%);
+    }
+
+    @include mq($from: lg) {
+      --gap: clamp(1.5rem, 5vw, 3rem);
+      flex-direction: row;
+      justify-content: space-between;
+      position: static;
+      backdrop-filter: none;
+      height: 70px;
+      transform: translateX(0);
+      padding: 1.25rem 0;
+      width: 100%;
+    }
+  }
+  &--mobile {
+    display: block;
+    @include mq($from: lg) {
+      display: none;
+    }
+  }
+  &__menu-wrapper {
+    --gap: 0;
+    @extend .d-flex;
+    flex-direction: column;
+
+    @include mq($from: lg) {
+      flex-direction: row;
+      margin-left: auto;
+    }
+    &:first-child > li:not(:last-child) {
+      margin: 15px 0;
+      @include mq($from: lg) {
+        margin: 0 0 0 36px;
+      }
+    }
+    @include mq($from: lg) {
+      &:first-child > li:last-child {
+        margin-left: 36px;
+      }
+    }
+  }
+  &__nav {
+    &-item {
+      --gap: 1rem;
+      @extend .d-inline-flex;
+      flex-direction: row;
+      color: $theme-gray;
+      @include mq($from: lg) {
+        --gap: 0.25rem;
+        justify-content: flex-end;
+      }
+    }
+  }
+  &__submenu-nav {
+    position: relative;
+    transition: $theme-transition;
+    margin-left: 20px;
+
+    @include mq($from: lg) {
+      position: absolute;
+      margin-left: -20px;
+      padding-left: 20px;
+      padding-right: 20px;
+    }
+
+    &[data-visible="false"] {
+      height: 0;
+      opacity: 0;
+      visibility: hidden;
+      margin-bottom: 0;
+
+      @include mq($from: lg) {
+        margin-top: 0;
+      }
+    }
+    &[data-visible="true"] {
+      opacity: 1;
+      visibility: visible;
+      margin-top: 20px;
+      @include mq($from: lg) {
+        background-color: $theme-white;
+        margin-top: 0;
+        padding-top: 10px;
+        padding-bottom: 30px;
+        border-radius: 15px;
+        box-shadow: 0px 0px 20px hsl(0deg 0% 0% / 30%);
+      }
+    }
+    & > li:not(:last-child) {
+      margin-bottom: 10px;
+    }
+  }
+  &__nav-toggle {
+    background-color: transparent;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+    img {
+      transition: $theme-transition;
+    }
+    &[aria-expanded="true"] {
+      img {
+        transform: rotate(180deg);
+      }
+    }
+    &[aria-expanded="false"] {
+      img {
+        transform: rotate(0);
+      }
+    }
+  }
+}
