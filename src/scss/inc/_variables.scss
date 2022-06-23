@@ -3,12 +3,16 @@ $theme-white: hsl(0, 0%, 98%);
 $theme-black: hsl(0, 0%, 8%);
 $theme-gray: hsl(0, 0%, 41%);
 $theme-tr-black: hsl(0 0% 0% /0.5);
+$theme-dark: hsl(212, 33%, 32%);
+$theme-light: hsl(0, 0%, 96%);
+$theme-blue: hsl(183, 56%, 52%);
+$theme-red: hsl(342, 97%, 65%);
 
 // Font
-$font-family: "Epilogue", sans-serif;
+$font-family: "Inter", sans-serif;
 $font-size: 18px;
-$theme-medium: 500;
-$theme-bold: 700;
+$font-light: 300;
+$font-regular: 400;
 
 // Transition
 $theme-transition: all 400ms, 400ms ease;
