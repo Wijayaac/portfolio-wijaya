@@ -1,0 +1,35 @@
+.footer {
+  background-color: $theme-black;
+
+  &__wrapper {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 30px 0;
+    text-align: center;
+  }
+  &__copy {
+    p {
+      color: $theme-white;
+    }
+  }
+  &__social {
+    @extend .d-flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 24px;
+    li {
+      margin: 0 10px;
+    }
+    a {
+      path {
+        color: $theme-white;
+        transition: $theme-transition;
+      }
+      &:hover {
+        path {
+          color: $theme-blue;
+        }
+      }
+    }
+  }
+}
