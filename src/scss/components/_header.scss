@@ -17,13 +17,10 @@
     align-items: center;
     justify-content: space-between;
     height: 65px;
-    margin: 0 auto;
-    max-width: 85vw;
 
     @include mq($from: lg) {
       justify-content: flex-start;
       height: 80px;
-      max-width: 1368px;
     }
   }
   &__logo-wrapper {

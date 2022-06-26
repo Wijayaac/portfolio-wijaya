@@ -1,0 +1,7 @@
+.section {
+  max-width: 85vw;
+  margin: 0 auto;
+  @include mq($from: lg) {
+    max-width: 1140px;
+  }
+}

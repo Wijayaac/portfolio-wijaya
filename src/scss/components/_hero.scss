@@ -1,0 +1,26 @@
+.hero {
+  background-color: $theme-light;
+  color: $theme-dark;
+  text-align: center;
+  height: 100vh;
+  min-height: 667px;
+
+  @include mq($from: lg) {
+    min-height: 800px;
+  }
+  &__wrapper {
+    @extend .d-flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  h1 {
+    font-size: 32px;
+    line-height: 110%;
+    font-weight: 900;
+
+    @include mq($from: lg) {
+      font-size: 72px;
+    }
+  }
+}
