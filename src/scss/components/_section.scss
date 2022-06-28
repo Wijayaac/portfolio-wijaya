@@ -1,7 +1,10 @@
 .section {
   max-width: 85vw;
   margin: 0 auto;
+  padding: 60px 0;
+
   @include mq($from: lg) {
     max-width: 1140px;
+    padding: 120px 0;
   }
 }
