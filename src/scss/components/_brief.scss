@@ -1,9 +1,13 @@
 .brief {
+  position: relative;
+  overflow: hidden;
   background-color: $theme-blue;
 
   &__wrapper {
     @extend .d-flex;
     flex-wrap: wrap;
+    position: relative;
+    z-index: 2;
   }
   &__title {
     font-size: 32px;
@@ -39,6 +43,22 @@
         height: 100%;
         object-position: center;
         object-fit: cover;
+      }
+    }
+    &-bg {
+      img {
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        width: 80%;
+        height: auto;
+        object-fit: contain;
+        object-position: center;
+        transform: translateY(450px);
+        margin-left: auto;
+        pointer-events: none;
       }
     }
   }
