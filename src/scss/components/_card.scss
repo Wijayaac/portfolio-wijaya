@@ -1,7 +1,5 @@
 .skill {
   &__title {
-    font-size: 32px;
-    line-height: 110%;
     margin-bottom: 24px;
   }
   &__lists {
@@ -9,9 +7,13 @@
     flex-wrap: wrap;
   }
 }
+
 .card {
   padding: 10px 0;
-  margin-bottom: 24px;
+
+  &:not(:last-child) {
+    margin-bottom: 24px;
+  }
 
   &__title {
     font-size: 24px;

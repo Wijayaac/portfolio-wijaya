@@ -1,0 +1,16 @@
+.cta {
+  &__wrapper {
+    padding-top: 0;
+  }
+  &__title {
+    span {
+      color: $theme-red;
+    }
+  }
+  &__button {
+    color: $theme-dark;
+    &-wrapper {
+      margin-top: 48px;
+    }
+  }
+}
