@@ -1,0 +1,20 @@
+.skill {
+  &__title {
+    font-size: 32px;
+    line-height: 110%;
+    margin-bottom: 24px;
+  }
+  &__lists {
+    @extend .d-flex;
+    flex-wrap: wrap;
+  }
+}
+.card {
+  padding: 10px 0;
+  margin-bottom: 24px;
+
+  &__title {
+    font-size: 24px;
+    margin-bottom: 12px;
+  }
+}

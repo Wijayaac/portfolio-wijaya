@@ -16,7 +16,10 @@
     color: $theme-white;
   }
   &__copy {
-    color: $theme-white;
+    p,
+    blockquote {
+      color: $theme-white;
+    }
   }
   &__button {
     color: $theme-white;
