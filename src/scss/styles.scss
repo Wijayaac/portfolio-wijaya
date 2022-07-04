@@ -1,4 +1,6 @@
 @import "vendors/bs/scss/bootstrap-grid";
+@import "~swiper/swiper.scss";
+@import "~swiper/modules/autoplay/autoplay.scss";
 
 // Includes
 @import "inc/mq";
@@ -14,4 +16,5 @@
 @import "components/hero";
 @import "components/brief";
 @import "components/card";
+@import "components/stack";
 @import "components/cta";
