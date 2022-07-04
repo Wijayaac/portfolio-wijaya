@@ -1,0 +1,12 @@
+.stack {
+  &__wrapper {
+    padding-bottom: 0;
+  }
+  &__logo {
+    svg {
+      width: 64px;
+      height: 64px;
+      opacity: 0.6;
+    }
+  }
+}
