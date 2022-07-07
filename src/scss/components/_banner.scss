@@ -1,0 +1,16 @@
+.banner {
+  height: 35vh;
+  min-height: 300px;
+  background-color: $theme-light;
+
+  &__wrapper {
+    @extend .d-flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    height: 100%;
+    padding-bottom: 60px;
+  }
+  &__subtitle {
+    @extend .text-subtitle;
+  }
+}
