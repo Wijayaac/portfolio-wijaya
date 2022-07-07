@@ -50,3 +50,12 @@ h2,
   font-size: 30px;
   line-height: 110%;
 }
+
+.text-subtitle {
+  font-size: 10px;
+  line-height: 110%;
+  text-transform: uppercase;
+  color: $theme-red;
+  margin-bottom: 6px;
+  letter-spacing: 0.1em;
+}
