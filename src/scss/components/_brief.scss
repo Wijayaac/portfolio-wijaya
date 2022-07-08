@@ -5,13 +5,22 @@
 
   &__wrapper {
     @extend .d-flex;
-    flex-wrap: wrap;
+    flex-direction: column;
     position: relative;
     z-index: 2;
+    @include mq($from: lg) {
+      flex-direction: row;
+      justify-content: space-between;
+    }
   }
   &__title {
     margin-bottom: 12px;
     color: $theme-white;
+  }
+  &__content {
+    @include mq($from: lg) {
+      max-width: 50%;
+    }
   }
   &__copy {
     p,
@@ -33,6 +42,11 @@
       width: 100%;
       padding-top: 82.5%;
       border-radius: 25px;
+
+      @include mq($from: lg) {
+        padding-top: 35%;
+        max-width: 450px;
+      }
 
       img {
         position: absolute;

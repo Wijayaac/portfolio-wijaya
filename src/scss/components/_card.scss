@@ -1,15 +1,29 @@
 .skill {
   &__title {
     margin-bottom: 24px;
+
+    @include mq($from: lg) {
+      max-width: 600px;
+    }
   }
   &__lists {
     @extend .d-flex;
-    flex-wrap: wrap;
+    flex-direction: column;
+
+    @include mq($from: lg) {
+      flex-direction: row;
+    }
   }
 }
 
 .card {
   padding: 10px 0;
+  @include mq($from: lg) {
+    padding-left: 0;
+    padding-right: 20px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
 
   &:not(:last-child) {
     margin-bottom: 24px;

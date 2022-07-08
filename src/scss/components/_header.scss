@@ -200,6 +200,7 @@
       @extend .d-inline-flex;
       flex-direction: row;
       color: $theme-gray;
+      text-transform: uppercase;
 
       @include mq($from: lg) {
         --gap: 0.25rem;
