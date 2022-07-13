@@ -17,19 +17,26 @@
 }
 
 .card {
-  padding: 10px 0;
+  border: 1px solid $theme-red;
+  border-radius: 20px;
+  height: 100%;
+  padding: 10px 7.5px;
   @include mq($from: lg) {
-    padding-left: 0;
-    padding-right: 20px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    padding: 20px 15px;
   }
 
   &:not(:last-child) {
     margin-bottom: 24px;
+
+    @include mq($from: lg) {
+      margin-right: 20px;
+    }
   }
 
   &__title {
+    @extend .d-flex;
+    align-items: center;
+    gap: 10px;
     font-size: 24px;
     margin-bottom: 12px;
   }
