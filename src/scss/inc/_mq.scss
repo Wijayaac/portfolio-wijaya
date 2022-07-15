@@ -25,4 +25,4 @@ $mq-static-breakpoint: lg;
 // to this list, ordered by width, e.g. (mobile, tablet, desktop).
 // $mq-show-breakpoints: (mobile, tablet, desktop, large);
 
-@import "~sass-mq";
+@import "./../../../node_modules/sass-mq/";
