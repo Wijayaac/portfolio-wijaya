@@ -1,6 +1,6 @@
 @import "vendors/bs/scss/bootstrap-grid";
-@import "~swiper/swiper.scss";
-@import "~swiper/modules/autoplay/autoplay.scss";
+@import "./../../node_modules/swiper/swiper.scss";
+@import "./../../node_modules/swiper/modules/autoplay/autoplay.scss";
 
 // Includes
 @import "inc/mq";

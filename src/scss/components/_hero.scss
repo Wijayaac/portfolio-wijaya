@@ -31,9 +31,17 @@
       box-shadow: 0px -2px 0px 0px $theme-red inset;
       transition: $theme-transition;
 
+      @include mq($from: lg) {
+        transition-duration: 500ms;
+      }
+
       &:hover {
         color: $theme-white;
         box-shadow: 200px -2px 0px 0px $theme-blue inset;
+
+        @include mq($from: lg) {
+          box-shadow: 50vw -2px 0px 0px $theme-blue inset;
+        }
       }
     }
   }
