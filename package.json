@@ -16,6 +16,7 @@
   },
   "dependencies": {
     "@swc/helpers": "^0.4.3",
+    "gsap": "^3.10.4",
     "sass-mq": "^6.0.0",
     "swiper": "^8.2.6"
   }
