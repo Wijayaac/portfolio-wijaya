@@ -3,7 +3,7 @@ import gsap from "gsap";
 class StaggerText {
   constructor() {
     let tl = gsap.timeline();
-    tl.from("span.words", {
+    tl.from("[data-motion='staggerTitle']", {
       duration: 1.5,
       top: 200,
       opacity: 0,
@@ -11,7 +11,7 @@ class StaggerText {
       ease: "power4(0.4, 1)",
       stagger: 0.6,
     });
-    tl.to("span.words", {
+    tl.to("[data-motion='staggerTitle']", {
       duration: 1,
       top: 0,
       opacity: 1,
