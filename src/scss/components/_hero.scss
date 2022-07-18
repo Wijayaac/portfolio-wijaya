@@ -18,12 +18,16 @@
     font-size: 32px;
     line-height: 120%;
     font-weight: 900;
+    position: relative;
+    overflow: hidden;
 
     @include mq($from: lg) {
       font-size: 72px;
     }
-
-    span {
+    span.words {
+      position: relative;
+    }
+    span.highlight {
       cursor: pointer;
       position: relative;
       overflow: hidden;
