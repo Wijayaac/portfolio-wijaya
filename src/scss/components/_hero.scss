@@ -24,10 +24,7 @@
     @include mq($from: lg) {
       font-size: 72px;
     }
-    span.words {
-      position: relative;
-    }
-    span.highlight {
+    b.highlight {
       cursor: pointer;
       position: relative;
       overflow: hidden;

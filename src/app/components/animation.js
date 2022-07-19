@@ -1,25 +1,28 @@
 import gsap from "gsap";
+import ScrollTrigger from "gsap/src/ScrollTrigger";
 
 class StaggerText {
   constructor() {
-    let words = gsap.utils.toArray("span.words");
-    words.forEach((elm) => {
-      let tl = gsap.timeline();
-      tl.from(elm, {
-        duration: 2,
-        top: -200,
-        opacity: 0,
-        delay: 0.5,
-        ease: "power4(0.4, 1)",
-        stagger: 1.5,
-      });
-      tl.to(elm, {
-        duration: 1,
-        top: 0,
-        opacity: 1,
-        delay: 2,
-        ease: "power4.in",
-        stagger: 1,
+    let scrollTexts = gsap.utils.toArray('[data-motion="staggerTitle"]');
+    gsap.registerPlugin(ScrollTrigger);
+    scrollTexts.forEach((elm) => {
+      let stagger = elm.querySelectorAll("span");
+
+      gsap.set(stagger, { top: 200, opacity: 0 });
+
+      ScrollTrigger.create({
+        trigger: elm,
+        start: "top 60%",
+        end: "bottom 50%",
+        onEnter: () => {
+          gsap.to(stagger, {
+            duration: 1.5,
+            top: 0,
+            opacity: 1,
+            ease: "power4(0.4, 1)",
+            stagger: 0.3,
+          });
+        },
       });
     });
   }
