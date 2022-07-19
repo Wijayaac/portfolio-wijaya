@@ -1,3 +1,6 @@
 [data-motion="staggerTitle"] {
-  position: relative;
+  overflow: hidden;
+  span {
+    position: relative;
+  }
 }

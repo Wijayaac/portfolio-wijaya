@@ -60,6 +60,7 @@
   &__title {
     margin-bottom: 12px;
     color: $theme-white;
+    overflow: hidden;
   }
   &__content {
     @include mq($from: lg) {
