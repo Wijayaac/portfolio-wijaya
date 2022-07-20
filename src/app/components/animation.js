@@ -9,6 +9,9 @@ class Motion {
   }
   staggerTitle() {
     let scrollTexts = gsap.utils.toArray('[data-motion="staggerTitle"]');
+    if (!scrollTexts[0]) {
+      return;
+    }
     scrollTexts.forEach((elm) => {
       let stagger = elm.querySelectorAll("span");
 
@@ -32,7 +35,9 @@ class Motion {
   }
   fadeIn() {
     let scrollFade = gsap.utils.toArray('[data-motion="fadeIn"]');
-
+    if (!scrollFade[0]) {
+      return;
+    }
     scrollFade.forEach((elm) => {
       gsap.set(elm, { opacity: 0 });
 
