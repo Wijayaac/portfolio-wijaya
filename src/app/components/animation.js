@@ -1,10 +1,17 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
 
-class StaggerText {
+class Motion {
   constructor() {
-    let scrollTexts = gsap.utils.toArray('[data-motion="staggerTitle"]');
     gsap.registerPlugin(ScrollTrigger);
+    this.staggerTitle();
+    this.fadeIn();
+  }
+  staggerTitle() {
+    let scrollTexts = gsap.utils.toArray('[data-motion="staggerTitle"]');
+    if (!scrollTexts[0]) {
+      return;
+    }
     scrollTexts.forEach((elm) => {
       let stagger = elm.querySelectorAll("span");
 
@@ -26,6 +33,28 @@ class StaggerText {
       });
     });
   }
+  fadeIn() {
+    let scrollFade = gsap.utils.toArray('[data-motion="fadeIn"]');
+    if (!scrollFade[0]) {
+      return;
+    }
+    scrollFade.forEach((elm) => {
+      gsap.set(elm, { opacity: 0 });
+
+      ScrollTrigger.create({
+        trigger: elm,
+        onEnter: () => {
+          gsap.to(elm, {
+            duration: 1.7,
+            opacity: 1,
+            delay: 1,
+            ease: "power4(0.4, 1)",
+            stagger: 0.4,
+          });
+        },
+      });
+    });
+  }
 }
 
-export default StaggerText;
+export default Motion;

@@ -4,3 +4,6 @@
     position: relative;
   }
 }
+[data-motion="fadeIn"] {
+  opacity: 0;
+}
