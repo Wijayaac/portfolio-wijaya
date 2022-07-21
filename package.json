@@ -17,6 +17,7 @@
   "dependencies": {
     "@swc/helpers": "^0.4.3",
     "gsap": "^3.10.4",
+    "in-view": "^0.6.1",
     "sass-mq": "^6.0.0",
     "swiper": "^8.2.6"
   }

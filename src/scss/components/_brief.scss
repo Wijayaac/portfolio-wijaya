@@ -4,13 +4,20 @@
   background-color: $theme-blue;
   &--edge {
     background-color: transparent;
-    margin-bottom: 60px;
+    @include mq($from: lg) {
+      margin-bottom: 60px;
+    }
   }
   &--edge & {
     &__wrapper {
       max-width: 1140px;
       margin-left: auto;
       margin-right: auto;
+      padding-bottom: 0;
+
+      @include mq($from: lg) {
+        padding-bottom: 60px;
+      }
     }
     &__title {
       color: $theme-black;
@@ -24,10 +31,16 @@
     &__button {
       color: $theme-black;
     }
+    &__content {
+      padding: 0 25px;
+    }
     &__floating {
-      position: absolute;
+      position: relative;
       width: 100%;
-      right: 0;
+      @include mq($from: lg) {
+        position: absolute;
+        right: 0;
+      }
     }
     &__img-wrapper {
       margin-left: auto;
