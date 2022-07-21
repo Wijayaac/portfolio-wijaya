@@ -3,6 +3,10 @@
     padding-top: 0;
   }
   &__title {
+    max-width: 700px;
+    @include mq($from: 1441px) {
+      max-width: 48.61vw;
+    }
     b {
       color: $theme-red;
     }

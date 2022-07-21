@@ -1,4 +1,12 @@
 .case {
+  &__wrapper {
+    padding-top: 80px;
+    margin-top: 40px;
+    @include mq($from: lg) {
+      padding-top: 60px;
+      margin-top: 0;
+    }
+  }
   &__title {
     text-align: center;
     margin-bottom: 48px;
