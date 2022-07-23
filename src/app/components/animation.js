@@ -22,7 +22,6 @@ class Motion {
         /* key: Optional String to prefix the CSS variables */
         key: null,
       });
-      console.log(elm);
 
       let stagger = elm.querySelectorAll("span");
 
@@ -38,7 +37,7 @@ class Motion {
             top: 0,
             opacity: 1,
             ease: "power4(0.4, 1)",
-            stagger: 0.05,
+            stagger: 0.025,
           });
         },
       });
