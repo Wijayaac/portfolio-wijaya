@@ -1,5 +1,6 @@
 import gsap from "gsap";
 import ScrollTrigger from "gsap/src/ScrollTrigger";
+import Splitting from "splitting";
 
 class Motion {
   constructor() {
@@ -13,6 +14,15 @@ class Motion {
       return;
     }
     scrollTexts.forEach((elm) => {
+      Splitting({
+        /* target: String selector, Element, Array of Elements, or NodeList */
+        target: elm,
+        /* by: String of the plugin name */
+        by: "chars",
+        /* key: Optional String to prefix the CSS variables */
+        key: null,
+      });
+
       let stagger = elm.querySelectorAll("span");
 
       gsap.set(stagger, { top: 200, opacity: 0 });
@@ -23,11 +33,11 @@ class Motion {
         end: "bottom 50%",
         onEnter: () => {
           gsap.to(stagger, {
-            duration: 1.5,
+            duration: 0.6,
             top: 0,
             opacity: 1,
             ease: "power4(0.4, 1)",
-            stagger: 0.3,
+            stagger: 0.025,
           });
         },
       });
