@@ -11,6 +11,12 @@
       color: $theme-red;
     }
   }
+  &__content {
+    margin-top: 24px;
+    @include mq($from: lg) {
+      margin-top: 32px;
+    }
+  }
   &__button {
     color: $theme-dark;
     &-wrapper {

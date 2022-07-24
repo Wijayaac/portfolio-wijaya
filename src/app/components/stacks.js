@@ -13,7 +13,7 @@ class Stack {
 
     const stackSwiper = new Swiper(this.stackElm, {
       spaceBetween: 40,
-      slidesPerView: 4,
+
       centeredSlides: true,
       loop: true,
       loopedSlides: 4,
@@ -21,6 +21,14 @@ class Stack {
         delay: 3000,
       },
       modules: [Autoplay],
+      breakpoints: {
+        320: {
+          slidesPerView: 4,
+        },
+        992: {
+          slidesPerView: 6,
+        },
+      },
     });
   }
 }
