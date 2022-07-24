@@ -29,8 +29,6 @@ class Motion {
 
       ScrollTrigger.create({
         trigger: elm,
-        start: "top 60%",
-        end: "bottom 50%",
         onEnter: () => {
           gsap.to(stagger, {
             duration: 0.6,
