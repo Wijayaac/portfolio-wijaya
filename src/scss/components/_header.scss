@@ -9,61 +9,79 @@
   transition: $theme-transition;
 
   &.scroll {
-    background-color: $theme-dark;
+    background-color: $theme-black;
   }
 
   &__wrapper {
     position: relative;
-    @extend .d-flex;
+    display: flex;
     align-items: center;
     justify-content: space-between;
     height: 65px;
-    padding: 10px 0;
+    padding: 90px 0;
+    transition: all 400ms, 400ms ease;
+
+    .scroll & {
+      padding: 24px 0;
+    }
 
     @include mq($from: lg) {
       justify-content: flex-start;
       height: 80px;
     }
   }
+
   &__logo-wrapper {
-    position: relative;
-    width: 120px;
-    height: 30px;
 
-    img {
-      position: absolute;
-      top: 0;
-      left: 0;
-      bottom: 0;
-      right: 0;
-      width: 100%;
-      height: auto;
-      object-fit: contain;
-      object-position: center;
-      transition: $theme-transition;
-
-      &[data-logo="full"] {
-        opacity: 1;
-        visibility: visible;
-      }
-      &[data-logo="short"] {
-        opacity: 0;
-        visibility: hidden;
-        width: 40px;
-      }
+    // position: relative;
+    // width: 120px;
+    // height: 30px;
+    p {
+      font-size: 28px;
+      font-weight: 500;
+      line-height: 90%;
+      color: $theme-black;
+      transition: $transition-fade;
 
       .scroll & {
-        &[data-logo="short"] {
-          opacity: 1;
-          visibility: visible;
-        }
-        &[data-logo="full"] {
-          opacity: 0;
-          visibility: hidden;
-        }
+        color: $theme-white;
       }
     }
+
+    // img {
+    //   position: absolute;
+    //   top: 0;
+    //   left: 0;
+    //   bottom: 0;
+    //   right: 0;
+    //   width: 100%;
+    //   height: auto;
+    //   object-fit: contain;
+    //   object-position: center;
+    //   transition: $theme-transition;
+
+    //   &[data-logo="full"] {
+    //     opacity: 1;
+    //     visibility: visible;
+    //   }
+    //   &[data-logo="short"] {
+    //     opacity: 0;
+    //     visibility: hidden;
+    //     width: 40px;
+    //   }
+
+    //   .scroll & {
+    //     &[data-logo="short"] {
+    //       opacity: 1;
+    //       visibility: visible;
+    //     }
+    //     &[data-logo="full"] {
+    //       opacity: 0;
+    //       visibility: hidden;
+    //     }
+    //   }
   }
+
   &__toggle {
     z-index: 9999;
     right: 0;
@@ -92,14 +110,17 @@
           background: $theme-light;
         }
       }
+
       &:nth-child(1) {
         top: 0px;
         transform-origin: left center;
       }
+
       &:nth-child(2) {
         top: 14px;
         transform-origin: left center;
       }
+
       &:nth-child(3) {
         top: 28px;
         transform-origin: left center;
@@ -112,10 +133,12 @@
         top: 0px;
         left: 8px;
       }
+
       &:nth-child(2) {
         width: 0%;
         opacity: 0;
       }
+
       &:nth-child(3) {
         transform: rotate(-45deg);
         top: 36px;
@@ -126,7 +149,7 @@
 
   &__primary-nav {
     --gap: 2.5rem;
-    @extend .d-flex;
+    display: flex;
 
     position: fixed;
     z-index: 1000;
@@ -167,48 +190,64 @@
       }
     }
   }
+
   &--mobile {
     display: block;
+
     @include mq($from: lg) {
       display: none;
     }
   }
+
   &__menu-wrapper {
     --gap: 0;
-    @extend .d-flex;
+    display: flex;
     flex-direction: column;
 
     @include mq($from: lg) {
       flex-direction: row;
       margin-left: auto;
     }
-    &:first-child > li:not(:last-child) {
+
+    li {
+      display: flex;
+      align-items: center;
       margin: 15px 0;
+    }
+
+    &:first-child>li:not(:last-child) {
       @include mq($from: lg) {
-        margin: 0 0 0 36px;
+        margin: 0 0 0 60px;
       }
     }
+
     @include mq($from: lg) {
-      &:first-child > li:last-child {
-        margin-left: 36px;
+      &:first-child>li:last-child {
+        margin-left: 60px;
       }
     }
   }
+
   &__nav {
     &-item {
-      --gap: 1rem;
-      @extend .d-inline-flex;
-      flex-direction: row;
       color: $theme-gray;
       text-transform: uppercase;
-
-      @include mq($from: lg) {
-        --gap: 0.25rem;
-        justify-content: flex-end;
-      }
+      position: relative;
+      z-index: 2;
+      font-size: 17px;
+      letter-spacing: 0.075em;
+      font-weight: 500;
 
       .scroll & {
         color: $theme-light;
+      }
+
+      &--cta {
+        color: $theme-white;
+        background-color: $theme-red;
+        padding: 10px 30px;
+        border-radius: 25px;
+        z-index: 1;
       }
     }
   }

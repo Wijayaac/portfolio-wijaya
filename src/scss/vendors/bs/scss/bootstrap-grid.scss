@@ -17,7 +17,7 @@ $include-column-box-sizing: true !default;
 
 @import "vendor/rfs";
 
-// @import "grid";
+@import "grid";
 
 @import "utilities";
 // Only use the utilities we need

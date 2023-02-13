@@ -1,0 +1,46 @@
+.link {
+    display: flex;
+
+    &__cta {
+        padding: 8px 16px;
+        background-color: $theme-black;
+        color: $theme-white;
+        border-radius: 25px;
+    }
+
+    a {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-weight: 500;
+    }
+
+    &__social {
+        display: flex;
+        margin-left: 20px;
+
+        a {
+            background-color: $theme-white;
+            border-radius: 100%;
+            border: 2px solid $theme-black;
+            width: 40px;
+            height: 40px;
+            margin-right: 15px;
+            transition: $transition-fade;
+
+            img {
+                width: 20px;
+                transition: $transition-fade;
+            }
+
+            &:hover {
+                background-color: $theme-black;
+
+                img {
+                    filter: invert(1);
+                }
+            }
+
+        }
+    }
+}

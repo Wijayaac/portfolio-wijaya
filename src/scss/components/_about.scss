@@ -1,0 +1,70 @@
+.about {
+    max-width: 1440px;
+    margin-left: auto;
+    margin-right: 0;
+    padding-left: 40px;
+    padding-top: 80px;
+
+    @include mq($from: 1360px) {
+        padding-left: 120px;
+    }
+
+    @include mq($from: 1440px) {
+        margin-right: auto;
+    }
+
+    &__wrapper {
+        display: flex;
+        align-items: center;
+        position: relative;
+
+        .ornament {
+            position: absolute;
+            top: -40px;
+            max-width: 130px;
+        }
+    }
+
+    &__image {
+        min-width: 420px;
+
+        img {
+            filter: grayscale(0.8);
+        }
+    }
+
+    &__text {
+        margin-right: 170px;
+        position: relative;
+
+        @include mq($from: lg) {
+            text-align: right;
+        }
+
+        h2 {
+            font-size: 130px;
+            font-weight: 900;
+            color: $theme-red;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+        }
+
+        img {
+            position: absolute;
+            top: 10px;
+            left: 40px;
+            max-width: 400px;
+
+            @include mq($from: lg) {
+                right: 30%;
+                left: unset;
+            }
+        }
+
+        p {
+            font-size: 30px;
+            line-height: 96.5%;
+            letter-spacing: 0;
+        }
+    }
+}

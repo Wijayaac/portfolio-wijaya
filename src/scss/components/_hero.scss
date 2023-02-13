@@ -1,49 +1,84 @@
 .hero {
-  background-color: $theme-light;
-  color: $theme-dark;
-  text-align: center;
-  height: 100vh;
-  min-height: 667px;
+  // background-color: $theme-light;
+  // color: $theme-dark;
+  // text-align: center;
+  // height: 100vh;
+  // min-height: 667px;
 
-  @include mq($from: lg) {
-    min-height: 800px;
-  }
+  // @include mq($from: lg) {
+  //   min-height: 800px;
+  // }
+  margin-top: 140px;
+
   &__wrapper {
-    @extend .d-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
   }
+
+  &__image {
+    img {
+      min-width: 540px;
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-left: 60px;
+
+    img {
+      position: absolute;
+      bottom: -30px;
+      right: -20px;
+    }
+
+    [data-dynamic="year"] {
+      position: absolute;
+      display: block;
+      top: 80px;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: rotate(-35deg);
+      left: -40px;
+    }
+  }
+
   h1 {
     font-size: 32px;
     line-height: 120%;
     font-weight: 900;
     position: relative;
     overflow: hidden;
+    text-transform: uppercase;
+    word-break: break-all;
+    color: $theme-red;
 
     @include mq($from: lg) {
-      font-size: 72px;
+      font-size: 172px;
     }
-    b.highlight {
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      color: $theme-red;
-      box-shadow: 0px -2px 0px 0px $theme-red inset;
-      transition: $theme-transition;
 
-      @include mq($from: lg) {
-        transition-duration: 500ms;
-      }
+    // b.highlight {
+    //   cursor: pointer;
+    //   position: relative;
+    //   overflow: hidden;
+    //   color: $theme-red;
+    //   box-shadow: 0px -2px 0px 0px $theme-red inset;
+    //   transition: $theme-transition;
 
-      &:hover {
-        color: $theme-white;
-        box-shadow: 200px -2px 0px 0px $theme-blue inset;
+    //   @include mq($from: lg) {
+    //     transition-duration: 500ms;
+    //   }
 
-        @include mq($from: lg) {
-          box-shadow: 50vw -2px 0px 0px $theme-blue inset;
-        }
-      }
-    }
+    //   &:hover {
+    //     color: $theme-white;
+    //     box-shadow: 200px -2px 0px 0px $theme-blue inset;
+
+    //     @include mq($from: lg) {
+    //       box-shadow: 50vw -2px 0px 0px $theme-blue inset;
+    //     }
+    //   }
+    // }
   }
 }
