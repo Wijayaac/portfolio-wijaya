@@ -55,7 +55,7 @@ class Motion {
           gsap.to(elm, {
             duration: 1.7,
             opacity: 1,
-            delay: 1,
+            delay: 0.5,
             ease: "power4(0.4, 1)",
             stagger: 0.4,
           });
