@@ -11,7 +11,11 @@
     "dev": "parcel src/index.html"
   },
   "devDependencies": {
+    "@parcel/packager-raw-url": "2.5.0",
+    "@parcel/packager-xml": "2.5.0",
     "@parcel/transformer-sass": "2.5.0",
+    "@parcel/transformer-webmanifest": "2.5.0",
+    "@parcel/transformer-xml": "2.5.0",
     "parcel": "^2.5.0",
     "posthtml-expressions": "^1.11.0",
     "posthtml-include": "^1.7.4"

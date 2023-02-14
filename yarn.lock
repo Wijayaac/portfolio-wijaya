@@ -385,6 +385,14 @@
     globals "^13.2.0"
     nullthrows "^1.1.1"
 
+"@parcel/packager-raw-url@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-raw-url/-/packager-raw-url-2.5.0.tgz#e95e1a38c3581bf5b5cd57aa6cfc6742ac5cce29"
+  integrity sha512-NIdmuuivotlIFTG8NU6SwR39wkDqzBSnEHjiLopZuj0bRY2PPnEeIHK0aoNayo8UOJOSthflwFKFW4goAb1S/w==
+  dependencies:
+    "@parcel/plugin" "2.5.0"
+    "@parcel/utils" "2.5.0"
+
 "@parcel/packager-raw@2.5.0":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@parcel/packager-raw/-/packager-raw-2.5.0.tgz#ce0103c26667c93e5c04eda92691363e93aecb1a"
@@ -401,6 +409,16 @@
     "@parcel/types" "2.5.0"
     "@parcel/utils" "2.5.0"
     posthtml "^0.16.4"
+
+"@parcel/packager-xml@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@parcel/packager-xml/-/packager-xml-2.5.0.tgz#8358f26dfe82ecb4eccda8b9ba25fff3d41deede"
+  integrity sha512-KFu3I7b2LAlnJxcJD0bufMCOmFEwZlvsNKrtOVooXUIbhe6Oe9yhQ4iw+FcosCdT0dI1U8jb808bkB6o+mhuAA==
+  dependencies:
+    "@parcel/plugin" "2.5.0"
+    "@parcel/types" "2.5.0"
+    "@parcel/utils" "2.5.0"
+    "@xmldom/xmldom" "^0.7.5"
 
 "@parcel/plugin@2.5.0":
   version "2.5.0"
@@ -619,6 +637,24 @@
     posthtml-render "^3.0.0"
     semver "^5.7.1"
 
+"@parcel/transformer-webmanifest@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-webmanifest/-/transformer-webmanifest-2.5.0.tgz#2892c3103bbee93a07ab5f756acd5a18e84172df"
+  integrity sha512-7RtE4f+QUzQqXHJ9kVL80x0xrOYdI7EDBl0jZbJ3Kiec8hE/aB1I3c2bmjyU44tGnd3z9mLzmRS9IaU/gZvXkw==
+  dependencies:
+    "@mischnic/json-sourcemap" "^0.1.0"
+    "@parcel/diagnostic" "2.5.0"
+    "@parcel/plugin" "2.5.0"
+    "@parcel/utils" "2.5.0"
+
+"@parcel/transformer-xml@2.5.0":
+  version "2.5.0"
+  resolved "https://registry.yarnpkg.com/@parcel/transformer-xml/-/transformer-xml-2.5.0.tgz#fa0ab954918622be65f7e02cbbcb8d98495a79ee"
+  integrity sha512-ndkAcE1ESFOIYtTx5BacDH45AfkHWyjolVh/JlIq3WxKTMxi1cN3gv0Hd3lL2oSgJGv9YmHnpsLIhVk2QlGFrA==
+  dependencies:
+    "@parcel/plugin" "2.5.0"
+    "@xmldom/xmldom" "^0.7.5"
+
 "@parcel/types@2.5.0":
   version "2.5.0"
   resolved "https://registry.yarnpkg.com/@parcel/types/-/types-2.5.0.tgz#e3818d4358f849ac2593605b98366b8e156ab533"
@@ -688,6 +724,11 @@
   version "4.0.0"
   resolved "https://registry.yarnpkg.com/@types/parse-json/-/parse-json-4.0.0.tgz#2f8bb441434d163b35fb8ffdccd7138927ffb8c0"
   integrity sha512-//oorEZjL6sbPcKUaCdIGlIUeH26mgzimjBB77G6XRgnDl/L5wOnpyBGRe/Mmf5CVW3PwEBE1NjiMZ/ssFh4wA==
+
+"@xmldom/xmldom@^0.7.5":
+  version "0.7.9"
+  resolved "https://registry.yarnpkg.com/@xmldom/xmldom/-/xmldom-0.7.9.tgz#7f9278a50e737920e21b297b8a35286e9942c056"
+  integrity sha512-yceMpm/xd4W2a85iqZyO09gTnHvXF6pyiWjD2jcOJs7hRoZtNNOO1eJlhHj1ixA+xip2hOyGn+LgcvLCMo5zXA==
 
 abortcontroller-polyfill@^1.1.9:
   version "1.7.3"
