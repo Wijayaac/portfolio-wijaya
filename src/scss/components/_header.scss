@@ -38,7 +38,7 @@
       font-weight: 500;
       line-height: 90%;
       color: $theme-black;
-      transition: $transition-fade;
+      transition: $theme-transition;
 
       .scroll & {
         color: $theme-white;

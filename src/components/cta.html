@@ -11,11 +11,11 @@
         </div>
         <div class="cta__button" data-motion="fadeIn">
             <div class="link">
-                <a href="#" class="link__cta">Contact me</a>
+                <a href="mailto:{{email}}" class="link__cta">Contact me</a>
                 <div class="link__social">
                     <each loop="social in socials">
-                        <a href="#">
-                            <img src="/src/images/icon-{{social}}.svg" alt="">
+                        <a href="{{social.url}}">
+                            <img src="/src/images/icon-{{social.name}}.svg" alt="">
                         </a>
                     </each>
                 </div>
