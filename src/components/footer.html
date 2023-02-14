@@ -1,0 +1,25 @@
+<footer class="footer" id="contact">
+    <div class="footer__wrapper">
+        <div class="footer__block">
+            <h2 data-motion="staggerTitle">Got a Project to work with?</h2>
+            <picture data-motion="fadeIn">
+                <img class="footer__highlight" src="/src/images/portfolio-text-footer.svg" alt="">
+            </picture>
+        </div>
+        <div class="footer__block" data-motion="fadeIn">
+            <div class="link">
+                <a href="#" class="link__cta">Contact me</a>
+                <div class="link__social">
+                    <each loop="social in socials">
+                        <a href="#">
+                            <img src="/src/images/icon-{{social}}.svg" alt="">
+                        </a>
+                    </each>
+                </div>
+            </div>
+        </div>
+        <div class="footer__copy" data-motion="fadeIn">
+            <p>Copyright &copy;<span data-dynamic="year">2023</span>. Wijayaac</p>
+        </div>
+    </div>
+</footer>

@@ -1,49 +1,88 @@
 .hero {
-  background-color: $theme-light;
-  color: $theme-dark;
-  text-align: center;
-  height: 100vh;
-  min-height: 667px;
+  margin-top: 65px;
 
   @include mq($from: lg) {
-    min-height: 800px;
+    margin-top: 140px;
   }
+
   &__wrapper {
-    @extend .d-flex;
+    display: flex;
     justify-content: center;
     align-items: center;
     height: 100%;
+
+    @include mq($until: lg) {
+      flex-direction: column;
+    }
   }
+
+  &__image {
+    position: relative;
+    min-width: 90vw;
+    padding-top: 300px;
+
+    @include mq($from: lg) {
+      min-width: 540px;
+      padding-top: 380px;
+    }
+
+    img {
+      @include img-ratio();
+
+    }
+  }
+
+  &__text {
+    position: relative;
+    margin-left: 20px;
+
+    @include mq($from: lg) {
+      margin-left: 60px;
+    }
+
+    img {
+      position: absolute;
+      max-width: 250px;
+      bottom: -20px;
+      right: 40px;
+
+      @include mq($from: lg) {
+        right: -20px;
+        bottom: -30px;
+        max-width: 100%;
+      }
+    }
+
+    [data-dynamic="year"] {
+      position: absolute;
+      display: block;
+      top: 0px;
+      left: -10px;
+      font-size: 20px;
+      font-weight: 900;
+      text-transform: uppercase;
+      transform: rotate(-35deg);
+      z-index: 5;
+
+      @include mq($from: lg) {
+        left: -40px;
+        top: 80px;
+      }
+    }
+  }
+
   h1 {
-    font-size: 32px;
+    font-size: 84px;
     line-height: 120%;
     font-weight: 900;
     position: relative;
     overflow: hidden;
+    text-transform: uppercase;
+    word-break: break-all;
+    color: $theme-red;
 
     @include mq($from: lg) {
-      font-size: 72px;
-    }
-    b.highlight {
-      cursor: pointer;
-      position: relative;
-      overflow: hidden;
-      color: $theme-red;
-      box-shadow: 0px -2px 0px 0px $theme-red inset;
-      transition: $theme-transition;
-
-      @include mq($from: lg) {
-        transition-duration: 500ms;
-      }
-
-      &:hover {
-        color: $theme-white;
-        box-shadow: 200px -2px 0px 0px $theme-blue inset;
-
-        @include mq($from: lg) {
-          box-shadow: 50vw -2px 0px 0px $theme-blue inset;
-        }
-      }
+      font-size: 172px;
     }
   }
 }

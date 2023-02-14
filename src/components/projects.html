@@ -1,0 +1,78 @@
+<section class="project section" id="projects">
+    <div class="project__wrapper">
+        <div class="project__header">
+            <h2 data-motion="staggerTitle">Projects</h2>
+            <picture data-motion="fadeIn">
+                <img src="/src/images/portfolio-text-project.svg" alt="">
+            </picture>
+        </div>
+        <div class="project__body">
+            <div class="row">
+                <div class="col col-lg-6">
+                    <div class="project__card">
+                        <div class="project__card-header">
+                            <h3>As a developer I built many website, with team or soloist.</h3>
+                            <p>Other than projects listed here, I also have another project that I am proud to work with</p>
+                        </div>
+                        <div class="project__card-footer">
+                            <div class="link">
+                                <a href="#" class="link__cta">Contact me</a>
+                                <div class="link__social">
+                                    <each loop="social in socials">
+                                        <a href="#">
+                                            <img src="/src/images/icon-{{social}}.svg" alt="">
+                                        </a>
+                                    </each>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <each loop="project in projects">
+                    <div class="col col-lg-6">
+                        <div class="project__card project__card-work">
+                            <picture>
+                                <img class="project__card-cover" src="{{project.imageURL}}" alt="{{project.name}}">
+                            </picture>
+                            <div class="project__card-header">
+                                <h3>{{project.name}}</h3>
+                                <p>{{project.description}}</p>
+                            </div>
+                        </div>
+                    </div>
+                </each>
+            </div>
+        </div>
+    </div>
+</section>
+<script locals>
+    module.exports = {
+        projects: [
+            {
+                name: 'Dream Surf Livin',
+                description: 'Simple booking app build with Nuxt and Strapi(node.js)',
+                imageURL: '/src/images/portfolio-dsl.jpg'
+            },
+            {
+                name: 'Surveyland',
+                description: 'Survey application build using Laravel and Vue',
+                imageURL: '/src/images/portfolio-survey.jpg'
+            },
+            {
+                name: 'Kayangan Jagat',
+                description: 'Company profile created with ACF',
+                imageURL: '/src/images/portfolio-kj.jpg'
+            },
+            {
+                name: 'Bali Advances Solution',
+                description: 'Showcasing products and services using Oxygen',
+                imageURL: '/src/images/portfolio-bas.jpg'
+            },
+            {
+                name: 'Undagi Code',
+                description: 'Headless CMS with Gatsby.js and PHP',
+                imageURL: '/src/images/portfolio-undagi.jpg'
+            },
+        ]
+    }
+</script>

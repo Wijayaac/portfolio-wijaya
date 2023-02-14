@@ -6,12 +6,14 @@
 *::after {
   box-sizing: border-box;
 }
+
 /*
     2. Remove default margin
   */
 * {
   margin: 0;
 }
+
 /*
     3. Allow percentage-based heights in the application
   */
@@ -19,6 +21,7 @@ html,
 body {
   height: 100%;
 }
+
 /*
     Typographic tweaks!
     4. Add accessible line-height
@@ -28,7 +31,9 @@ body {
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
   font-family: $font-family;
+  background-color: $theme-light;
 }
+
 /*
     6. Improve media defaults
   */
@@ -40,6 +45,7 @@ svg {
   display: block;
   max-width: 100%;
 }
+
 /*
     7. Remove built-in form typography styles
   */
@@ -49,6 +55,7 @@ textarea,
 select {
   font: inherit;
 }
+
 /*
     8. Avoid text overflows
   */
@@ -78,6 +85,7 @@ ul {
 
 a {
   text-decoration: none;
+
   &:hover {
     text-decoration: none;
   }
@@ -91,6 +99,7 @@ button {
   outline: none;
   border: none;
   background-color: transparent;
+
   &:focus {
     outline: none;
     border: none;
