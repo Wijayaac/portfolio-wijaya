@@ -1,12 +1,14 @@
 .about {
     max-width: 1440px;
     margin-left: auto;
-    margin-right: 0;
-    padding-left: 40px;
-    padding-top: 80px;
+    margin-right: 20px;
+    padding-left: 20px;
+    padding-top: 40px;
 
     @include mq($from: 1360px) {
+        padding-top: 80px;
         padding-left: 120px;
+        padding-right: 0;
     }
 
     @include mq($from: 1440px) {
@@ -18,53 +20,86 @@
         align-items: center;
         position: relative;
 
+        @include mq($until: lg) {
+            flex-direction: column;
+        }
+
         .ornament {
             position: absolute;
-            top: -40px;
-            max-width: 130px;
+            top: -50px;
+            max-width: 60px;
+            left: 0;
+
+            @include mq($from: lg) {
+                max-width: 130px;
+                top: -40px;
+            }
         }
     }
 
     &__image {
-        min-width: 420px;
+        min-width: 300px;
+        position: relative;
+        padding-top: 320px;
+
+        @include mq($from: lg) {
+            min-width: 420px;
+            padding-top: 520px;
+        }
 
         img {
             filter: grayscale(0.8);
+            @include img-ratio();
         }
     }
 
     &__text {
-        margin-right: 170px;
+        margin-right: 0;
+        margin-bottom: 30px;
         position: relative;
 
         @include mq($from: lg) {
+            margin-right: 170px;
+            margin-bottom: 0;
             text-align: right;
         }
 
         h2 {
-            font-size: 130px;
+            font-size: 84px;
             font-weight: 900;
             color: $theme-red;
             text-transform: uppercase;
             margin-bottom: 20px;
+
+            @include mq($from: lg) {
+                font-size: 130px;
+
+            }
         }
 
         img {
             position: absolute;
-            top: 10px;
-            left: 40px;
-            max-width: 400px;
+            top: 5px;
+            left: 30px;
+            max-width: 280px;
 
             @include mq($from: lg) {
+                left: 40px;
+                top: 10px;
+                max-width: 400px;
                 right: 30%;
                 left: unset;
             }
         }
 
         p {
-            font-size: 30px;
+            font-size: 24px;
             line-height: 96.5%;
             letter-spacing: 0;
+
+            @include mq($from: lg) {
+                font-size: 30px;
+            }
         }
     }
 }

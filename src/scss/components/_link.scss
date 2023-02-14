@@ -17,7 +17,11 @@
 
     &__social {
         display: flex;
-        margin-left: 20px;
+        margin-left: 10px;
+
+        @include mq($from: lg) {
+            margin-left: 20px;
+        }
 
         a {
             background-color: $theme-white;

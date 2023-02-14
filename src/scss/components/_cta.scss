@@ -12,13 +12,18 @@
     height: 100%;
     border-radius: 12px;
     background-color: $theme-black;
-    left: 20px;
-    top: 20px;
+    left: 10px;
+    top: 10px;
     z-index: 1;
+
+    @include mq($from: lg) {
+      top: 20px;
+      left: 20px;
+    }
   }
 
   &__wrapper {
-    padding: 50px 80px;
+    padding: 20px;
     display: flex;
     justify-content: space-between;
     flex-direction: column;
@@ -27,6 +32,10 @@
     background-color: $theme-light;
     border-radius: 12px;
     border: 1px solid $theme-black;
+
+    @include mq($from: lg) {
+      padding: 50px 80px;
+    }
   }
 
   &__content {
@@ -46,7 +55,11 @@
   }
 
   &__button {
-    margin-top: 120px;
+    margin-top: 60px;
     max-width: 500px;
+
+    @include mq($from: lg) {
+      margin-top: 120px;
+    }
   }
 }
