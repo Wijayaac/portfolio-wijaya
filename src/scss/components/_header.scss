@@ -6,7 +6,7 @@
   z-index: 9999;
   width: 100%;
   background-color: $theme-light;
-  transition: $theme-transition;
+  transition: padding 400ms, 400ms ease;
 
   &.scroll {
     background-color: $theme-black;
@@ -38,7 +38,7 @@
       font-weight: 500;
       line-height: 90%;
       color: $theme-black;
-      transition: $transition-fade;
+      transition: $theme-transition;
 
       .scroll & {
         color: $theme-white;

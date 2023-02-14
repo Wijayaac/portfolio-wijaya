@@ -1,0 +1,38 @@
+.not-found {
+    padding-top: 80px;
+
+    img {
+        @include mq($from: lg) {
+            max-width: 720px;
+            margin: 0 auto;
+        }
+    }
+
+    &__button {
+        text-align: center;
+
+        @include mq($from: lg) {
+            max-width: 400px;
+            margin: 0 auto;
+        }
+
+        a {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: 500;
+            padding: 8px 16px;
+            background-color: $theme-white;
+            color: $theme-black;
+            border: 2px solid $theme-black;
+            border-radius: 25px;
+            transition: $theme-transition;
+
+            &:hover {
+                color: $theme-white;
+                background-color: $theme-black;
+            }
+        }
+
+    }
+}

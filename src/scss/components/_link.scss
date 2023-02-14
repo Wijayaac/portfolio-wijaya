@@ -6,6 +6,10 @@
         background-color: $theme-black;
         color: $theme-white;
         border-radius: 25px;
+
+        @include mq($until: lg) {
+            font-size: 14px;
+        }
     }
 
     a {
@@ -18,10 +22,7 @@
     &__social {
         display: flex;
         margin-left: 10px;
-
-        @include mq($from: lg) {
-            margin-left: 20px;
-        }
+        margin-left: 20px;
 
         a {
             background-color: $theme-white;
@@ -29,12 +30,15 @@
             border: 2px solid $theme-black;
             width: 40px;
             height: 40px;
-            margin-right: 15px;
-            transition: $transition-fade;
+            transition: $theme-transition;
+
+            &:not(:last-child) {
+                margin-right: 15px;
+            }
 
             img {
                 width: 20px;
-                transition: $transition-fade;
+                transition: $theme-transition;
             }
 
             &:hover {
