@@ -27,7 +27,7 @@
 
     @include mq($from: lg) {
       justify-content: flex-start;
-      padding: 90px 0;
+      padding: 90px 20px;
       height: 80px;
     }
   }
