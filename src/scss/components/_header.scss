@@ -22,7 +22,7 @@
     padding: 60px 0;
 
     .scroll & {
-      padding: 24px 0;
+      padding: 24px 20px;
     }
 
     @include mq($from: lg) {
