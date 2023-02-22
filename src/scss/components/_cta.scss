@@ -20,6 +20,17 @@
       top: 20px;
       left: 20px;
     }
+
+  }
+
+  @include mq($until: 1240px, $and: false, $from: lg) {
+    padding-left: 40px;
+    padding-right: 40px;
+
+    &::before {
+      left: 50px;
+      max-width: 92vw;
+    }
   }
 
   &__wrapper {

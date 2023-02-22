@@ -36,6 +36,10 @@
         font-size: 110px;
         text-transform: uppercase;
 
+        @include mq($until: lg, $and: false, $from: sm) {
+            font-size: 90px;
+        }
+
         @include mq($from: lg) {
             font-size: 150px;
         }

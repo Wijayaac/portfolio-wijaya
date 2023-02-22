@@ -1,9 +1,12 @@
 .about {
     max-width: 1440px;
     margin-left: auto;
-    margin-right: 20px;
     padding-left: 20px;
     padding-top: 40px;
+
+    @include mq($until: 1240px, $and: false, $from: lg) {
+        max-width: 98vw;
+    }
 
     @include mq($from: 1360px) {
         padding-top: 80px;
@@ -33,6 +36,10 @@
             @include mq($from: lg) {
                 max-width: 130px;
                 top: -40px;
+            }
+
+            @include mq($until: 1240px, $and: false, $from: lg) {
+                top: -120px;
             }
         }
     }
@@ -64,6 +71,10 @@
             text-align: right;
         }
 
+        @include mq($until: 1240px, $and: false, $from: lg) {
+            margin-right: 80px;
+        }
+
         h2 {
             font-size: 84px;
             font-weight: 900;
@@ -88,7 +99,6 @@
                 top: 10px;
                 max-width: 400px;
                 right: 30%;
-                left: unset;
             }
         }
 

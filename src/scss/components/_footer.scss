@@ -35,6 +35,11 @@
       transform: translateX(-50%);
       max-width: 230px;
 
+      @include mq($until: lg, $and: false, $from: sm) {
+        left: 20%;
+        bottom: 30px;
+      }
+
       @include mq($from: lg) {
         bottom: 10px;
         left: 40%;
