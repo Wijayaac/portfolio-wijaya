@@ -36,7 +36,7 @@
 
             @include mq($from: lg) {
                 max-width: 130px;
-                top: -40px;
+                top: -110px;
             }
 
             @include mq($until: 1240px, $and: false, $from: lg) {
